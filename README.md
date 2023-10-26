@@ -17,11 +17,18 @@ mvn exec:java
 ´´´
 puerto
 ´´´´
-localhost:4567
+localhost:22
 ´´´´
 primero miramos si se esta ejecutando correctmente y nos muestra lo que necesitamos
 
 ![](src/img/1.png)
 ![](src/img/2.png)
+con json
+![](src/img/3.png)
+se genera el puerto en la seguridad
 
+![](src/img/4.png)
+luego lo instalamos en aws
+
+![](src/img/5.png)
 

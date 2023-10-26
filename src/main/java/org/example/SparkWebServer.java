@@ -14,14 +14,16 @@ public class SparkWebServer {
         get("hello", (req,res) -> "Hello Docker!");
 
         get("lucasseq", (req,res) -> {
-            List<Integer> x = getLucas(Integer.parseInt(req.queryParams("value")));
+            int value = Integer.parseInt(req.queryParams("value"));
+            List<Integer> x = getLucas(value);
+            String operation = "Secuencia de Lucas";
 
-
-            String s = "\n" +
-                    " \"operation\": \"Secuencia de Lucas\"," +
-                    " \"input\":"+ value  "," +
-                    " \"output\":  x," ;
-            return s;
+            return "" +
+                    "{\n" +
+                    "\t\"operation\": \"" + operation + "\",\n" +
+                    "\t\"input\": " + value + ",\n"+
+                    "\t\"output\": \"" + x + "\"\n" +
+                    "}";
 
 
         });
@@ -31,7 +33,7 @@ public class SparkWebServer {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 4567;
+        return 22;
     }
     private static int getx(int x) {
         return x;
