@@ -37,4 +37,7 @@ luego lo instalamos en aws
 ![](src/img/6.png)
 ![](src/img/7.png)
 ![](src/img/8.png)
+se muestra funcionando en aws
 
+![](src/img/10.png)
+![](src/img/11.png)
